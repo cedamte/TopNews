@@ -1,0 +1,3 @@
+rootProject.name='TopNews'
+include ':app'
+include ':domain'
