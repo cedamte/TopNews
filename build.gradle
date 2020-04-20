@@ -7,13 +7,16 @@ buildscript {
     ext.dagger_version = '2.27'
     ext.retrofit_version = '2.8.1'
     ext.okhttp3_version = '4.5.0'
+    ext.glide_version = '4.11.0'
+    ext.lifecycle_version = '2.2.0'
+    ext.timber_version = '4.7.1'
     repositories {
         google()
         jcenter()
-        
+
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.6.2'
+        classpath 'com.android.tools.build:gradle:3.6.3'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -25,7 +28,7 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+
     }
 }
 
