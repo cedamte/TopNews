@@ -9,7 +9,7 @@ import javax.inject.Inject
 class GetBreakingNewsUseCaseImpl @Inject constructor(private val repository: BreakingNewsRepository) :
     GetBreakingNewsUseCase {
     override fun getNews(name: String): Observable<ScreenState> {
-        return repository.getBreakingNews()
+        return repository.getBreakingNews(name)
             .map {
                 if (it.isEmpty()) ScreenState.Empty else
                     BreakingNewsScreenState.Content(it)

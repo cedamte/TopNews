@@ -4,5 +4,5 @@ import com.example.domain.entities.BreakingNewsEntity
 import io.reactivex.Observable
 
 interface BreakingNewsRepository {
-    fun getBreakingNews(): Observable<List<BreakingNewsEntity>>
+    fun getBreakingNews(name: String): Observable<List<BreakingNewsEntity>>
 }

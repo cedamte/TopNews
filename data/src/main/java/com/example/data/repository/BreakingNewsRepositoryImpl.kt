@@ -12,8 +12,8 @@ class BreakingNewsRepositoryImpl @Inject constructor(
     private val topHeadlinesService: TopHeadlinesService,
     private val breakingNewsEntityMapper: Mapper<Article, BreakingNewsEntity>
 ) : BreakingNewsRepository {
-    override fun getBreakingNews(): Observable<List<BreakingNewsEntity>> {
-        return topHeadlinesService.getTopHeadlines()
+    override fun getBreakingNews(name: String): Observable<List<BreakingNewsEntity>> {
+        return topHeadlinesService.getTopHeadlines(name)
             .map {
                 breakingNewsEntityMapper.mapList(item = it.articles)
             }
