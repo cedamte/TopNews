@@ -1,5 +1,6 @@
 package com.example.topnews.breakingnews
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,16 +14,24 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.domain.entities.BreakingNewsScreenState
 import com.example.domain.entities.ScreenState
 import com.example.topnews.R
+import com.example.topnews.app.TopNewsApplication
 import com.example.topnews.databinding.FragmentBreakingNewsBinding
+import javax.inject.Inject
 
 class BreakingNewsFragment : Fragment() {
 
+    @Inject
     lateinit var viewModelFactory: BreakingNewsViewModelFactory
 
     private lateinit var breakingNewsAdapter: BreakingNewsAdapter
     private val viewModel: BreakingNewsViewModel by lazy {
         ViewModelProvider(this, viewModelFactory)
             .get(BreakingNewsViewModel::class.java)
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        (activity?.application as TopNewsApplication).appComponent.inject(this)
     }
 
     override fun onCreateView(

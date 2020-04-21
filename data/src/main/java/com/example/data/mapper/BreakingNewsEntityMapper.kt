@@ -2,8 +2,9 @@ package com.example.data.mapper
 
 import com.example.data.entities.Article
 import com.example.domain.entities.BreakingNewsEntity
+import javax.inject.Inject
 
-class BreakingNewsEntityMapper : Mapper<Article, BreakingNewsEntity> {
+class BreakingNewsEntityMapper @Inject constructor() : Mapper<Article, BreakingNewsEntity> {
     override fun map(item: Article): BreakingNewsEntity {
         return BreakingNewsEntity(
             source = item.source.name,

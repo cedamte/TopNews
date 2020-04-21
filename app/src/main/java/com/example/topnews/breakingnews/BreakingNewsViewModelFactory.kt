@@ -3,7 +3,7 @@ package com.example.topnews.breakingnews
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.domain.usecases.GetBreakingNewsUseCase
-import io.reactivex.rxjava3.disposables.CompositeDisposable
+import io.reactivex.disposables.CompositeDisposable
 import java.lang.IllegalArgumentException
 
 @Suppress("UNCHECKED_CAST")
