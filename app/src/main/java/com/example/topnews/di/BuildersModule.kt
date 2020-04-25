@@ -1,6 +1,6 @@
 package com.example.topnews.di
 
-import com.example.data.entities.Article
+import com.example.data.entities.topheadlines.Article
 import com.example.data.mapper.BreakingNewsEntityMapper
 import com.example.data.mapper.Mapper
 import com.example.data.repository.BreakingNewsRepositoryImpl

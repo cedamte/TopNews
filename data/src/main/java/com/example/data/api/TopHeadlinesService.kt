@@ -1,7 +1,7 @@
 package com.example.data.api
 
 import com.example.data.BuildConfig
-import com.example.data.entities.TopHeadlines
+import com.example.data.entities.topheadlines.TopHeadlines
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query

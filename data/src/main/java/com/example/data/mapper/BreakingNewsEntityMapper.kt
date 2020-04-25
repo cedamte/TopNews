@@ -1,6 +1,6 @@
 package com.example.data.mapper
 
-import com.example.data.entities.Article
+import com.example.data.entities.topheadlines.Article
 import com.example.domain.entities.BreakingNewsEntity
 import javax.inject.Inject
 

@@ -1,7 +1,7 @@
 package com.example.data.repository
 
 import com.example.data.api.TopHeadlinesService
-import com.example.data.entities.Article
+import com.example.data.entities.topheadlines.Article
 import com.example.data.mapper.Mapper
 import com.example.domain.entities.BreakingNewsEntity
 import com.example.domain.repositories.BreakingNewsRepository

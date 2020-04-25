@@ -1,8 +1,7 @@
-package com.example.data.entities
+package com.example.data.entities.topheadlines
 
 
 import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
 data class Source(
     @Json(name = "id")

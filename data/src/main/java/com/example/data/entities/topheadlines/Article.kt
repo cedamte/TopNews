@@ -1,4 +1,4 @@
-package com.example.data.entities
+package com.example.data.entities.topheadlines
 
 
 import com.squareup.moshi.Json
