@@ -11,3 +11,8 @@ sealed class BreakingNewsScreenState : ScreenState() {
     data class Content(val payload: List<BreakingNewsEntity>) :
         BreakingNewsScreenState()
 }
+
+sealed class CountriesScreenState : ScreenState() {
+    data class Content(val payload: List<CountriesEntity>) :
+        CountriesScreenState()
+}
