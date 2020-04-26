@@ -20,6 +20,7 @@ android {
     buildTypes {
         debug {
             buildConfigField("String", "TOP_HEADLINES_ENDPOINT", '"v2/top-headlines"')
+            buildConfigField("String", "COUNTRIES_ENDPOINT", '"v2/all"')
         }
         release {
             minifyEnabled false

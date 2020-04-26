@@ -3,7 +3,7 @@ package com.example.data.entities.topheadlines
 
 import com.squareup.moshi.Json
 
-data class TopHeadlines(
+data class  TopHeadlines(
     @Json(name = "articles")
     val articles: List<Article>,
     @Json(name = "status")
