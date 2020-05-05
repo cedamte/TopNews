@@ -18,6 +18,10 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField("String", "API_KEY", '"a01bc9025a74443e94dc13af65cdf9b8"')
+            buildConfigField("String", "BASE_URL", '"https://newsapi.org/"')
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
