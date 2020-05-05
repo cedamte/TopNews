@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="countries"
+            type="com.example.domain.entities.CountriesEntity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_item_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_flags"
+            imageUrl="@{countries.flagUrl}"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:contentDescription="@string/countries_image_description"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/tv_country_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{countries.name}"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_country_alpha2_code"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/img_flags"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Name of Country" />
+
+        <TextView
+            android:id="@+id/tv_country_alpha2_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{countries.alpha2Code}"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/img_flags"
+            app:layout_constraintTop_toBottomOf="@+id/tv_country_name"
+            tools:text="Country alpha2Code" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
